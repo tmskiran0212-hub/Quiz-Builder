@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Result</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="result-box">
+
+    <h1>Quiz Completed!</h1>
+
+    <h2 id="finalScore"></h2>
+
+    <p id="resultMessage"></p>
+
+    <a href="user.html" class="btn">Back to Dashboard</a>
+
+</div>
+
+<script>
+    let score = localStorage.getItem("quizScore");
+    let total = localStorage.getItem("quizTotal");
+
+    document.getElementById("finalScore").innerText =
+        "Your Score: " + score + " / " + total;
+
+    if (score == total) {
+        document.getElementById("resultMessage").innerText =
+            "Excellent! Perfect Score.";
+    } else {
+        document.getElementById("resultMessage").innerText =
+            "Good attempt! Keep practicing.";
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <h2>Create Quiz</h2>
+
+    <div>
+        <a href="admin.html">Dashboard</a>
+        <button class="logout" onclick="logout()">Logout</button>
+    </div>
+</nav>
+
+<div class="form-box">
+
+    <h1>Create New Quiz</h1>
+
+    <input type="text" id="quizTitle" placeholder="Quiz Title">
+
+    <input type="text" id="question"
+           placeholder="Enter Question">
+
+    <input type="text" id="option1"
+           placeholder="Option 1">
+
+    <input type="text" id="option2"
+           placeholder="Option 2">
+
+    <input type="text" id="option3"
+           placeholder="Option 3">
+
+    <input type="text" id="option4"
+           placeholder="Option 4">
+
+    <select id="correctAnswer">
+        <option value="0">Correct Option 1</option>
+        <option value="1">Correct Option 2</option>
+        <option value="2">Correct Option 3</option>
+        <option value="3">Correct Option 4</option>
+    </select>
+
+    <button onclick="addQuestion()">Add Question</button>
+
+    <div id="questionList"></div>
+
+    <button onclick="saveQuiz()">Save Quiz</button>
+
+    <p id="quizMessage"></p>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

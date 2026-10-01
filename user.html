@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <h2>User Dashboard</h2>
+
+    <div>
+        <a href="index.html">Home</a>
+        <button class="logout" onclick="logout()">Logout</button>
+    </div>
+</nav>
+
+<div class="dashboard">
+
+    <h1>Welcome, User</h1>
+
+    <h2>Available Quizzes</h2>
+
+    <div id="quizList" class="quiz-grid"></div>
+
+</div>
+
+<script src="script.js"></script>
+<script>
+    checkUser();
+    displayQuizzes();
+</script>
+
+</body>
+</html>
